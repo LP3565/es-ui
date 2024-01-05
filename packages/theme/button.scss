@@ -1,0 +1,24 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('button') {
+  width: 80px;
+  height: 40px;
+  padding: 10px 5px;
+  font-weight: 500;
+  transition-property: border-color;
+  transition-duration: 0.4s;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  background-color: white;
+
+  &:hover {
+    border: 1px solid $primary;
+  }
+
+  @include m('primary') {
+    color: $primary;
+    border: 1px solid $secondary;
+  }
+}

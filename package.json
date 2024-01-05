@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "pnpm run -C build start",
+    "test": "vitest",
     "lint": "eslint --fix",
     "format": "prettier --write --cache .",
     "prepare": "husky install"
@@ -11,26 +13,59 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "vue": "~3.4.5"
+  },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@esbuild-kit/cjs-loader": "^2.4.4",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-autoprefixer": "^0.0.37",
+    "@types/gulp-clean-css": "^4.3.4",
+    "@types/gulp-sass": "^5.0.4",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
+    "@vitejs/plugin-vue": "^5.0.2",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
+    "@vue/babel-plugin-jsx": "^1.1.5",
+    "@vue/compiler-sfc": "^3.4.5",
+    "@vue/test-utils": "^2.4.3",
+    "del": "^7.1.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-vue": "^9.19.2",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
+    "node-sass": "^9.0.0",
     "prettier": "^3.1.1",
-    "rollup": "^4.9.2"
+    "rollup": "^4.9.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.69.7",
+    "tslib": "^2.6.2",
+    "vitest": "^1.1.2"
   },
   "lint-staged": {
     "*.{vue, js, ts, jsx, tsx}": [
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "jsdom": "^23.0.1"
   }
 }

@@ -1,0 +1,33 @@
+$namespace: 'es' !default;
+$common-separator: '-' !default;
+$element-separator: '__' !default;
+$modifier-separator: '--' !default;
+$state-prefix: 'is' !default;
+
+@mixin b($block) {
+  $selector: $namespace + $common-separator + $block;
+  
+  .#{$selector} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $selector: & + $element-separator + $element;
+  
+  @at-root {
+    #{$selector} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: & + $modifier-separator + $modifier;
+
+  @at-root {
+    #{$selector} {
+      @content;
+    }
+  }
+}
