@@ -1,4 +1,6 @@
+/* eslint-disable vue/prefer-import-from-vue */
 /** 借鉴 element-plus */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { warn } from 'vue'
 import { isObject, hasOwn } from '@vue/shared'
 import { fromPairs } from 'lodash-unified'
