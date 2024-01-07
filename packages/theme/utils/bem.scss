@@ -31,3 +31,11 @@ $state-prefix: 'is' !default;
     }
   }
 }
+
+@mixin is($bind) {
+  $selector: $state-prefix + $common-separator + $bind;
+
+  .#{$selector} {
+    @content;
+  }
+}

@@ -17,7 +17,8 @@
     "declaration": true,
     "lib": ["ESNext", "DOM"],
     "paths": {
-      "@es-ui/*": ["packages/*"]
+      "@es-ui/*": ["packages/*"],
+      "@type/*": ["typings/*"]
     }
   },
   "include": ["packages"],

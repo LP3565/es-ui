@@ -1,24 +1,114 @@
 @import './color/index.scss';
 @import './utils/bem.scss';
+@import './common/ripple.scss';
 
 @include b('button') {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
-  height: 40px;
-  padding: 10px 5px;
-  font-weight: 500;
-  transition-property: border-color;
-  transition-duration: 0.4s;
+  padding: 8px 6px;
   box-sizing: border-box;
   border-radius: 8px;
   outline: none;
-  background-color: white;
+  appearance: none;
+  user-select: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $secondary;
+  background-color: #fff;
+  color: $primary;
+  font-weight: 500;
+  transition-property: border-color, background-color;
+  transition-duration: 0.4s;
+  
 
   &:hover {
-    border: 1px solid $primary;
+    border-color: $primary;  
   }
 
   @include m('primary') {
+    background-color: $primary;
+    color: #fff;
+    border-color: $primary;
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  @include m('error') {
+    background-color: $error;
+    color: #000;
+    border-color: $error;
+    &:hover {
+        border-color: transparent;
+      }
+  }
+
+  @include m('warning') {
+    background-color: $warning;
+    color: #000;
+    border-color: $warning;
+    &:hover {
+        border-color: transparent;
+      }
+  }
+
+  @include m('success') {
+    background-color: $success;
+    color: #fff;
+    border-color: $success;
+    &:hover {
+        border-color: transparent;
+      }
+  }
+
+  @include m('info') {
+    background-color: $info;
     color: $primary;
-    border: 1px solid $secondary;
+    border-color: $info;
+    &:hover {
+        border-color: transparent;
+      }
+  }
+
+  @include m('fab') {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  @include m('large') {
+    width: 100px;
+    padding: 10px 8px;
+  }
+
+  @include m('small') {
+    width: 60px;
+    padding: 6px 4px;
   }
 }
+
+@include is('disabled') {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@include is('round') {
+  border-radius: 20px;
+}
+
+@include is('circle') {
+  padding: 10px;
+  box-sizing: content-box;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+@include ripple;

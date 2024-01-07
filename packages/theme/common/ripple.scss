@@ -1,0 +1,65 @@
+@mixin ripple() {
+  @keyframes start {
+      0% {
+        transform: scale(0);
+        opacity: 0.1;
+      }
+  
+      100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+    }
+  
+    @keyframes end {
+      0% {
+        opacity: 1;
+      }
+  
+      100% {
+        opacity: 0;
+      }
+    }
+  
+    .ripple-root {
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background-color: transparent;
+      z-index: 0;
+      border-radius: inherit;
+    }
+  
+    .ripple-root>.ripple-start {
+      position: absolute;
+      display: block;
+      opacity: 0;
+    }
+  
+    .ripple-root>.ripple-start.start {
+      opacity: 0.3;
+      transform: scale(1);
+      animation: start 0.6s ease-in-out;
+    }
+  
+    .ripple-root>.ripple-start>.ripple-end {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+  
+    .ripple-root>.ripple-start.end>.ripple-end {
+      opacity: 0;
+      animation: end 0.6s ease-in-out;
+    }
+}

@@ -18,24 +18,36 @@ import { esuiInput, dist, themeDist } from './constants/paths'
 import { aliasOption, typeOption, babelOption } from './utils/builduiOption'
 
 export const buildUi = async function () {
-  const bundle = await rollup({
-    input: esuiInput,
-    plugins: [nodeResolve(), commonjs(), alias(aliasOption), typescript(typeOption), vue(), babel(babelOption), terser()],
-    external: ['vue'],
-  })
+  try {
+    const bundle = await rollup({
+      input: esuiInput,
+      plugins: [
+        nodeResolve(),
+        commonjs(),
+        alias(aliasOption),
+        typescript(typeOption),
+        vue(),
+        babel(babelOption),
+        terser(),
+      ],
+      external: ['vue'],
+    })
 
-  await bundle.write({
-    dir: dist,
-    format: 'cjs',
-    exports: 'named',
-    entryFileNames: () => `[name].cjs`,
-  })
+    await bundle.write({
+      dir: dist,
+      format: 'cjs',
+      exports: 'named',
+      entryFileNames: () => `[name].cjs`,
+    })
 
-  await bundle.write({
-    dir: dist,
-    format: 'es',
-    entryFileNames: () => `[name].mjs`,
-  })
+    await bundle.write({
+      dir: dist,
+      format: 'es',
+      entryFileNames: () => `[name].mjs`,
+    })
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const clearDist = async function () {
@@ -44,7 +56,13 @@ export const clearDist = async function () {
 
 export const buildTheme = function () {
   const sass = gulpSass(sassDart)
-  return gulp.src('../packages/theme/*.scss').pipe(sass()).pipe(autoPrefixer()).pipe(csslean()).pipe(gulp.dest(themeDist))
+  return gulp
+    .src('../packages/theme/*.scss')
+    .pipe(sass())
+    .pipe(autoPrefixer())
+    .pipe(csslean())
+    .pipe(gulp.dest(themeDist))
 }
 
+// export default gulp.series(clearDist, buildUi, buildTheme)
 export default gulp.series(clearDist, buildUi, buildTheme)

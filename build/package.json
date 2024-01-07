@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts"
+    "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "start:watch": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts watchHandle"
   },
   "keywords": [],
   "author": "",
