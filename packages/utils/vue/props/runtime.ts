@@ -1,7 +1,7 @@
 /* eslint-disable vue/prefer-import-from-vue */
 /** 借鉴 element-plus */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { warn } from 'vue'
+import { warn, type PropType } from 'vue'
 import { isObject, hasOwn } from '@vue/shared'
 import { fromPairs } from 'lodash-unified'
 import {
@@ -16,6 +16,8 @@ import {
 } from './types'
 
 export const epPropKey = '__epPropKey'
+
+export const definePropType = <T>(val: any): PropType<T> => val
 
 export const isEpProp = (val: unknown): val is EpProp<any, any, any> =>
   isObject(val) && !!(val as any)[epPropKey]

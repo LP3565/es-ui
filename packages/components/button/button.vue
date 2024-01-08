@@ -1,5 +1,6 @@
 <template>
   <button
+    ref="_ref"
     :type="type"
     :mold="mold"
     :class="[
@@ -24,10 +25,13 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useNamespace } from '@es-ui/hooks/useNamespace'
 import { buttonProps } from './button'
 import { useButton } from './use-button'
 import { useRipple } from '@es-ui/hooks/useRipple'
+
+const _ref = ref<HTMLButtonElement>()
 
 const props = defineProps(buttonProps)
 const emit = defineEmits(['onClick'])
@@ -42,5 +46,12 @@ const { startRipple, stopRipple } = useRipple()
 
 defineOptions({
   name: 'EsButton',
+})
+
+defineExpose({
+  _ref,
+  _size,
+  _disable: props.disabled,
+  _mold,
 })
 </script>
