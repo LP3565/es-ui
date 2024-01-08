@@ -1,8 +1,9 @@
 import type { App } from 'vue'
 import EsButton from './button/button.vue'
 import EsCard from './card/card.vue'
+import EsInput from './input/input.vue'
 
-const components = [EsButton, EsCard]
+const components = [EsButton, EsCard, EsInput]
 
 const install = (app: App) => {
   components.forEach((item) => {
@@ -10,7 +11,7 @@ const install = (app: App) => {
   })
 }
 
-export { EsButton, EsCard }
+export { EsButton, EsCard, EsInput }
 
 export default {
   install,

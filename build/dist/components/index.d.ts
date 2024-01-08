@@ -1,7 +1,8 @@
 import type { App } from 'vue';
 import EsButton from './button/button.vue';
 import EsCard from './card/card.vue';
-export { EsButton, EsCard };
+import EsInput from './input/input.vue';
+export { EsButton, EsCard, EsInput };
 declare const _default: {
     install: (app: App<any>) => void;
 };

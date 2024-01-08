@@ -1,0 +1,51 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('input-root') {
+  position: relative;
+  width: 240px;
+  padding: 20px 10px 8px 10px;
+  border: 1px solid rgb(229, 231, 235);
+  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: text;
+  overflow: hidden;
+
+  @include e('input') {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+
+  @include e('label') {
+    position: absolute;
+    font-size: 16px;
+    color: rgb(108, 115, 127);
+    transition: all 0.4s;
+  }
+}
+
+@include b('input') {
+  width: 240px;
+  padding: 6px 10px;
+  border: 1px solid rgb(229, 231, 235);
+  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  outline: none;
+
+  &:hover {
+    border-color: rgb(108, 115, 127);
+  }
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: $primary 0px 0px 0px 2px;
+  }
+}
+
+@include is('disabled') {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

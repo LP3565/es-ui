@@ -28,7 +28,7 @@
 import { ref } from 'vue'
 import { useNamespace } from '@es-ui/hooks/useNamespace'
 import { buttonProps } from './button'
-import { useButton } from './use-button'
+import { useButton } from './useButton'
 import { useRipple } from '@es-ui/hooks/useRipple'
 
 const _ref = ref<HTMLButtonElement>()
@@ -55,3 +55,4 @@ defineExpose({
   _mold,
 })
 </script>
+./useButton
