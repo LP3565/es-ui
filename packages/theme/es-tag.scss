@@ -1,0 +1,77 @@
+@import './utils/bem.scss';
+
+@include b('tag') {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: 24px;
+  padding: 0 8px;
+  background-color: rgba(41, 109, 234, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: rgba(41, 109, 234, 0.8);
+  font-size: 12px;
+
+  & > .es-tag__close:hover {
+    background-color: rgba(41, 109, 234, 0.5);
+    color: #fff;
+  }
+
+  @include e('close') {
+    margin-left: 4px;
+    margin-top: 2px;
+    border-radius: 50%;
+  }
+
+  @include m('error') {
+    background-color: rgba(255, 0, 0, 0.1);
+      color: rgba(255, 0, 0, 0.8);
+    
+    & > .es-tag__close:hover {
+      background-color: rgba(255, 0, 0, 0.5);
+        color: #fff;
+    }
+  }
+
+  @include m('success') {
+    background-color: rgba(0, 128, 0, 0.1);
+      color: rgba(0, 128, 0, 0.8);
+
+      & > .es-tag__close:hover {
+        background-color: rgba(0, 128, 0, 0.5);
+          color: #fff;
+      }
+  }
+
+  @include m('info') {
+    background-color: rgba(135, 206, 235, 0.2);
+      color: rgb(135, 206, 235);
+
+      & > .es-tag__close:hover {
+        background-color: rgba(135, 206, 235, 0.5);
+          color: #fff;
+      }
+  }
+
+  @include m('warning') {
+    background-color: rgba(255, 255, 0, 0.1);
+      color: rgb(255, 255, 0);
+
+      & > .es-tag__close:hover {
+        background-color: rgba(255, 255, 0, 0.5);
+          color: #fff;
+      }
+  }
+
+  @include m('small') {
+    height: 20px;
+    padding: 0 5px;
+  }
+
+  @include m('large') {
+    height: 35px;
+    padding: 15px;
+    font-size: 14px;
+  }
+}

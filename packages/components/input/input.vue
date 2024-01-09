@@ -12,6 +12,8 @@
       @change="changeHandle"
       @input="inputHandle"
       @keydown="keydownHandle"
+      @focus="focusHandle"
+      @blur="blurHandle"
     />
   </template>
   <template v-else>
@@ -27,6 +29,8 @@
         @change="changeHandle"
         @input="inputHandle"
         @keydown="keydownHandle"
+        @focus="focusHandle"
+        @blur="blurHandle"
         :class="[fn.e('input'), fn.is('disabled', disabled)]"
       />
       <label :for="label" :class="[fn.e('label'), fn.is('disabled', disabled)]">{{ label }}</label>
@@ -75,6 +79,14 @@ const inputHandle = (event: Event) => {
 
 const keydownHandle = (event: KeyboardEvent) => {
   emit('keydown', event)
+}
+
+const focusHandle = (event: Event) => {
+  emit('focus', event)
+}
+
+const blurHandle = (event: Event) => {
+  emit('blur', event)
 }
 
 defineOptions({

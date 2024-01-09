@@ -26,6 +26,6 @@ export const inputProps = buildProps({
   disabled: Boolean,
 } as const)
 
-export const inputEmit = ['update:model-value', 'change', 'input', 'keydown']
+export const inputEmit = ['update:model-value', 'change', 'input', 'keydown', 'focus', 'blur']
 
 export type InputProps = ExtractPropTypes<typeof inputProps>
