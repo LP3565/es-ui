@@ -1,7 +1,7 @@
 declare const _default: import("vue").DefineComponent<{
     readonly mold: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "" | "default" | "primary" | "success" | "warning" | "error" | "info" | "fab", unknown, "default", boolean>;
     readonly type: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "button" | "submit" | "reset", unknown, "button", boolean>;
-    readonly size: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "default" | "large" | "small", never, "default", false>;
+    readonly size: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "" | "default" | "large" | "small", never, "", false>;
     readonly disabled: BooleanConstructor;
     readonly round: BooleanConstructor;
     readonly circle: BooleanConstructor;
@@ -10,7 +10,7 @@ declare const _default: import("vue").DefineComponent<{
 }>, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "onClick"[], "onClick", import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     readonly mold: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "" | "default" | "primary" | "success" | "warning" | "error" | "info" | "fab", unknown, "default", boolean>;
     readonly type: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "button" | "submit" | "reset", unknown, "button", boolean>;
-    readonly size: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "default" | "large" | "small", never, "default", false>;
+    readonly size: import("../../utils/vue/props/types").EpPropFinalized<StringConstructor, "" | "default" | "large" | "small", never, "", false>;
     readonly disabled: BooleanConstructor;
     readonly round: BooleanConstructor;
     readonly circle: BooleanConstructor;
@@ -22,6 +22,6 @@ declare const _default: import("vue").DefineComponent<{
     readonly disabled: boolean;
     readonly round: boolean;
     readonly circle: boolean;
-    readonly size: import("../../utils/vue/props/types").EpPropMergeType<StringConstructor, "default" | "large" | "small", never>;
+    readonly size: import("../../utils/vue/props/types").EpPropMergeType<StringConstructor, "" | "default" | "large" | "small", never>;
 }, {}>;
 export default _default;

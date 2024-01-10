@@ -3,8 +3,9 @@ import EsButton from './button/button.vue'
 import EsCard from './card/card.vue'
 import EsInput from './input/input.vue'
 import EsTag from './tag/tag.vue'
+import EsRadio from './radio/radio.vue'
 
-const components = [EsButton, EsCard, EsInput, EsTag]
+const components = [EsButton, EsCard, EsInput, EsTag, EsRadio]
 
 const install = (app: App) => {
   components.forEach((item) => {
@@ -12,7 +13,7 @@ const install = (app: App) => {
   })
 }
 
-export { EsButton, EsCard, EsInput, EsTag }
+export { EsButton, EsCard, EsInput, EsTag, EsRadio }
 
 export default {
   install,
