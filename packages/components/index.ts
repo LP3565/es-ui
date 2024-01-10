@@ -4,8 +4,9 @@ import EsCard from './card/card.vue'
 import EsInput from './input/input.vue'
 import EsTag from './tag/tag.vue'
 import EsRadio from './radio/radio.vue'
+import EsCheckbox from './checkbox/checkbox.vue'
 
-const components = [EsButton, EsCard, EsInput, EsTag, EsRadio]
+const components = [EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox]
 
 const install = (app: App) => {
   components.forEach((item) => {
@@ -13,7 +14,7 @@ const install = (app: App) => {
   })
 }
 
-export { EsButton, EsCard, EsInput, EsTag, EsRadio }
+export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox }
 
 export default {
   install,

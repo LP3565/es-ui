@@ -1,6 +1,6 @@
 <template>
   <label :for="label" :class="[b(), is('disabled', disabled)]">
-    <span @mousedown="startRipple" @mouseup="stopRipple" :class="e('box')">
+    <span @mousedown="startRipple" @mouseup="stopRipple" @mouseleave="stopRipple" :class="e('box')">
       <input
         :class="e('type')"
         type="radio"

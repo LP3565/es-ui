@@ -12,6 +12,7 @@ import autoPrefixer from 'gulp-autoprefixer'
 import sassDart from 'sass'
 import gulpSass from 'gulp-sass'
 import csslean from 'gulp-clean-css'
+import svg from 'rollup-plugin-svg'
 
 import { esuiInput, dist, themeDist } from './constants/paths'
 
@@ -26,6 +27,7 @@ export const buildUi = async function () {
         commonjs(),
         alias(aliasOption),
         typescript(typeOption),
+        svg(),
         vue(),
         babel(babelOption),
         terser(),
