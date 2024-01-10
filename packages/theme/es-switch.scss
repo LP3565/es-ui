@@ -1,0 +1,51 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('switch') {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+
+  @include e('type') {
+    display: none;
+
+    &:checked ~ .es-switch__label {
+      background-color: rgb(158, 119, 237);
+      box-shadow: rgb(158, 119, 237, 0.4) 0px 0px 0px 2px;
+    }
+
+    &:checked ~ .es-switch__label::after {
+      transform: translateX(20px);
+    }
+  }
+
+  @include e('label') {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+  }
+}
+
+@include is('disabled') {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
