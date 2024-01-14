@@ -1,0 +1,142 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('select') {
+  position: relative;
+
+  @include e('input') {
+    overflow: hidden;
+    position: relative;
+    width: 160px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &:hover .es-select__clear {
+      opacity: 1;
+    }
+
+    &:hover .is-vital {
+      display: none;
+    }
+  }
+
+  @include e('title') {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition-property: top, font-size;
+    transition-duration: 0.4s;
+  }
+
+  @include e('vital') {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 10px;
+    font-size: 14px;
+    transform: translateY(-50%);
+  }
+
+  @include e('tool') {
+     width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: auto;
+    appearance: none;
+    user-select: none;
+  }
+
+  @include e('arrow') {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: rgb(158, 119, 237);
+    transition: transform 0.4s;
+  }
+
+  @include e('clear') {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 255, 0.4);
+    color: #fff;
+    transition: opacity 0.4s;
+  }
+
+  @include e('options') {
+    transform: scaleY(0);
+    position: absolute;
+    top: 52px;
+    display: flex;
+    width: max-content;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    list-style: none;
+    transition: transform 0.4s;
+    z-index: 999;
+  }
+}
+
+@include b('select-menu') {
+  width: 160px;
+  border-left: 1px solid #e0e0e0;
+
+  &:nth-child(1) {
+    border-left: none;
+  }
+
+  @include e('ul') {
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @include e('label') {
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: rgba(0, 0, 255, 0.08);
+    }
+  }
+
+  @include e('next') {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+@include is('active') {
+  color: $primary;
+  background-color: rgba(0, 0, 255, 0.08);
+}
