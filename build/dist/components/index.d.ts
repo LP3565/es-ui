@@ -7,7 +7,8 @@ import EsRadio from './radio/radio.vue';
 import EsCheckbox from './checkbox/checkbox.vue';
 import EsSwitch from './switch/switch.vue';
 import EsSelect from './select/select.vue';
-export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect };
+import EsSteps from './steps/steps.vue';
+export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps };
 declare const _default: {
     install: (app: App<any>) => void;
 };

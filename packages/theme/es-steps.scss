@@ -1,0 +1,184 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('steps') {
+  @include e('item') {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @include e('left-retract') {
+    padding-left: 20px;
+
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+  }
+
+  @include e('count') {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: $primary;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  @include e('vertical-line') {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      top: 34px;
+      left: 50%;
+      height: 9999px;
+      background-color: skyblue;
+    }
+  }
+
+  @include e('vertical-accomplish-line') {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      top: 34px;
+      left: 50%;
+      height: 9999px;
+      background-color: $primary;
+      z-index: 1;
+      animation: verticalaccomplishlineimpulse 10s;
+    }
+  }
+
+  @include e('describe') {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    margin-top: 4px;
+    box-sizing: border-box;
+    max-width: 140px;
+
+    & > .es-steps__unfinished {
+      color: #ccc;
+    }
+  }
+
+  @include e('accomplish') {
+    color: $primary;
+    background-color: rgba(0, 0, 255, 0.08);
+    animation: accomplishscale 0.6s ease-in;
+  }
+
+  @include e('accomplish-icon') {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 18px;
+  }
+
+  @include e('title') {
+    position: relative;
+    width: max-content;
+    padding-right: 20px;
+    font-size: 16px;
+    color: #4a4848;
+    white-space: nowrap;
+  }
+
+  @include e('description') {
+    font-size: 14px;
+    color: rgb(129, 129, 130);
+    white-space: nowrap;
+  }
+
+  @include e('time') {
+    font-size: 12px;
+    color: #b0a5a5;
+    white-space: nowrap;
+  }
+
+  @include e('horizontal-line') {
+    &::after {
+      content: '';
+      display: block;
+      inset: 100%;
+      position: absolute;
+      width: 9999px;
+      top: 50%;
+      height: 1px;
+      background-color: skyblue;
+    }
+  }
+
+  @include e('horizontal-accomplish-line') {
+    &::before {
+      content: '';
+      display: block;
+      inset: 100%;
+      position: absolute;
+      width: 9999px;
+      top: 50%;
+      height: 1px;
+      background-color: $primary;
+      z-index: 1;
+      animation: accomplishlineimpulse 10s;
+    }
+  }
+
+  @include e('horizontal-step-last') {
+    align-self: end;
+    flex: none;
+  }
+}
+
+@include b('steps-container') {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@include b('steps-vertical-container') {
+  height: 100%;
+  flex-direction: column;
+}
+
+@keyframes accomplishlineimpulse  {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 9999px;
+  }
+}
+
+@keyframes verticalaccomplishlineimpulse {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 9999px;
+  }
+}
+
+@keyframes accomplishscale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

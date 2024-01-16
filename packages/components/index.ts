@@ -7,8 +7,19 @@ import EsRadio from './radio/radio.vue'
 import EsCheckbox from './checkbox/checkbox.vue'
 import EsSwitch from './switch/switch.vue'
 import EsSelect from './select/select.vue'
+import EsSteps from './steps/steps.vue'
 
-const components = [EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect]
+const components = [
+  EsButton,
+  EsCard,
+  EsInput,
+  EsTag,
+  EsRadio,
+  EsCheckbox,
+  EsSwitch,
+  EsSelect,
+  EsSteps,
+]
 
 const install = (app: App) => {
   components.forEach((item) => {
@@ -16,7 +27,7 @@ const install = (app: App) => {
   })
 }
 
-export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect }
+export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps }
 
 export default {
   install,
