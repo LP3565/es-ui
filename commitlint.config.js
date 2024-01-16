@@ -8,7 +8,7 @@ module.exports = {
         'chore', // 构建过程或者负责构建，第三方库
         'upd', // 更新
         'docs', // 文档相关
-        'feat', // 新功能
+        'feat', // 新组件
         'fix', // 修复 bug
         'perf', //性能优化
         'refactor', // 重构
