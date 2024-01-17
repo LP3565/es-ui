@@ -8,6 +8,7 @@ import EsCheckbox from './checkbox/checkbox.vue'
 import EsSwitch from './switch/switch.vue'
 import EsSelect from './select/select.vue'
 import EsSteps from './steps/steps.vue'
+import EsScrollBar from './scrollbar/scrollbar.vue'
 
 const components = [
   EsButton,
@@ -19,6 +20,7 @@ const components = [
   EsSwitch,
   EsSelect,
   EsSteps,
+  EsScrollBar,
 ]
 
 const install = (app: App) => {
@@ -27,7 +29,18 @@ const install = (app: App) => {
   })
 }
 
-export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps }
+export {
+  EsButton,
+  EsCard,
+  EsInput,
+  EsTag,
+  EsRadio,
+  EsCheckbox,
+  EsSwitch,
+  EsSelect,
+  EsSteps,
+  EsScrollBar,
+}
 
 export default {
   install,

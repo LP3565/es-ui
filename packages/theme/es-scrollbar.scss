@@ -1,0 +1,63 @@
+@import './utils/bem.scss';
+
+@include b('scrollbar') {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include e('container') {
+    width: 100%;
+    overflow: auto;
+  }
+
+  @include m('hidden-default') {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @include e('horizontal') {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+  }
+
+  @include e('vertical') {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+  }
+
+  @include e('view') {
+    width: 100%;
+  }
+
+  @include e('thumb') {
+    position: absolute;
+    cursor: pointer;
+  }
+}
+
+@include is('horizontal') {
+  bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+@include is('vertical') {
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 6px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
