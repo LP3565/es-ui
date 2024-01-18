@@ -9,6 +9,7 @@ import EsSwitch from './switch/switch.vue'
 import EsSelect from './select/select.vue'
 import EsSteps from './steps/steps.vue'
 import EsScrollBar from './scrollbar/scrollbar.vue'
+import EsAlert from './alert/alert.vue'
 
 const components = [
   EsButton,
@@ -21,6 +22,7 @@ const components = [
   EsSelect,
   EsSteps,
   EsScrollBar,
+  EsAlert,
 ]
 
 const install = (app: App) => {
@@ -40,6 +42,7 @@ export {
   EsSelect,
   EsSteps,
   EsScrollBar,
+  EsAlert,
 }
 
 export default {

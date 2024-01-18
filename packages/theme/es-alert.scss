@@ -1,0 +1,68 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('alert') {
+  display: flex;
+  flex: none;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 1;
+
+  @include e('icon') {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @include e('describe') {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  @include e('description') {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  @include e('clear') {
+    flex: 1;
+    width: 16px;
+    height: 16px;
+    text-align: right;
+  }
+
+  @include m('success') {
+    background-color: rgba(0, 128, 0, 0.08);
+    color: $success;
+  }
+
+  @include m('error') {
+    background-color: rgba(255, 0, 0, 0.08);
+    color: $error;
+  }
+
+  @include m('info') {
+    background-color: rgb(135, 206, 235, 0.2);
+    color: $primary;
+  }
+
+  @include m('warning') {
+    background-color: rgba(255, 255, 0, 0.08);
+    color: rgb(183, 183, 16);
+  }
+}
+
+.alert-enter-active,
+.alert-leave-active {
+  transition: opacity 0.4s;
+}
+
+.alert-enter-from,
+.alert-leave-to {
+  opacity: 0;
+}

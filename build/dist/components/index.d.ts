@@ -9,7 +9,8 @@ import EsSwitch from './switch/switch.vue';
 import EsSelect from './select/select.vue';
 import EsSteps from './steps/steps.vue';
 import EsScrollBar from './scrollbar/scrollbar.vue';
-export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps, EsScrollBar, };
+import EsAlert from './alert/alert.vue';
+export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps, EsScrollBar, EsAlert, };
 declare const _default: {
     install: (app: App<any>) => void;
 };
