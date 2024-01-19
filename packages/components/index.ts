@@ -10,6 +10,7 @@ import EsSelect from './select/select.vue'
 import EsSteps from './steps/steps.vue'
 import EsScrollBar from './scrollbar/scrollbar.vue'
 import EsAlert from './alert/alert.vue'
+import EsDialog from './dialog/dialog.vue'
 
 const components = [
   EsButton,
@@ -23,6 +24,7 @@ const components = [
   EsSteps,
   EsScrollBar,
   EsAlert,
+  EsDialog,
 ]
 
 const install = (app: App) => {
@@ -43,6 +45,7 @@ export {
   EsSteps,
   EsScrollBar,
   EsAlert,
+  EsDialog,
 }
 
 export default {

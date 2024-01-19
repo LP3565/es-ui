@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 export const useRipple = () => {
   const rippleStarts: HTMLSpanElement[] = []
   let isDown = false
