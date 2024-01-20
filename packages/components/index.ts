@@ -11,6 +11,7 @@ import EsSteps from './steps/steps.vue'
 import EsScrollBar from './scrollbar/scrollbar.vue'
 import EsAlert from './alert/alert.vue'
 import EsDialog from './dialog/dialog.vue'
+import EsMessage from './message/install'
 
 const components = [
   EsButton,
@@ -46,6 +47,7 @@ export {
   EsScrollBar,
   EsAlert,
   EsDialog,
+  EsMessage,
 }
 
 export default {

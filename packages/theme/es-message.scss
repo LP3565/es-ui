@@ -1,0 +1,66 @@
+@import './color/index.scss';
+@import './utils/bem.scss';
+
+@include b('message') {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translate(-50%, 50%);
+  width: max-content;
+  top: 0;
+  left: 50%;
+  margin-top: 16px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  z-index: 1;
+
+  @include e('icon') {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+  }
+
+  @include e('content') {
+    font-size: 14px;
+    padding-left: 6px;
+  }
+
+  @include e('close') {
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 20px;
+    padding: 1px;
+  }
+
+  @include m('success') {
+    color: $success
+  }
+
+  @include m('error') {
+    color: $error;
+  }
+
+  @include m('info') {
+    color: $primary;
+  }
+
+  @include m('warning') {
+    color: $warning;
+  }
+}
+
+.message-enter-active,
+.message-leave-active {
+  transition: transform 0.4s ease-out;
+}
+
+.message-enter-from,
+.message-leave-to {
+  transform: translateX(-50%) translateY(-200%);
+}

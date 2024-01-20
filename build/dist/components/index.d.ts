@@ -11,7 +11,8 @@ import EsSteps from './steps/steps.vue';
 import EsScrollBar from './scrollbar/scrollbar.vue';
 import EsAlert from './alert/alert.vue';
 import EsDialog from './dialog/dialog.vue';
-export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps, EsScrollBar, EsAlert, EsDialog, };
+import EsMessage from './message/install';
+export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps, EsScrollBar, EsAlert, EsDialog, EsMessage, };
 declare const _default: {
     install: (app: App<any>) => void;
 };
