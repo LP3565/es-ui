@@ -1,0 +1,89 @@
+@import './utils/bem.scss';
+
+@include b('drawer') {
+  @include e('modal') {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  @include e('box') {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.04);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  @include m('right') {
+    right: 0;
+    top: 0;
+    width: 28%;
+    height: 100%;
+    transform: translateX(0);
+  }
+
+  @include m('top') {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28%;
+    transform: translateY(0);
+  }
+
+  @include m('left') {
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 100%;
+    transform: translateX(0);
+  }
+
+  @include m('bottom') {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 28%;
+    transform: translateY(0);
+  }
+}
+
+@include is('modal') {
+  background-color: transparent;
+}
+
+.molad-enter-active,
+.molad-leave-active {
+  transition: opacity 0.4s;
+}
+
+.molad-enter-from,
+.molad-leave-to {
+  opacity: 0;
+}
+
+.drawer-enter-active {
+  transition: transform 0.4s ease-out;
+}
+
+.drawer-enter-and-leave-from-to-right {
+  transform: translateX(110%);
+}
+
+.drawer-enter-and-leave-from-to-top {
+  transform: translateY(-110%);
+}
+
+.drawer-enter-and-leave-from-to-left {
+  transform: translateX(-110%);
+}
+
+.drawer-enter-and-leave-from-to-bottom {
+  transform: translateY(110%);
+}

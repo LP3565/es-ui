@@ -12,7 +12,8 @@ import EsScrollBar from './scrollbar/scrollbar.vue';
 import EsAlert from './alert/alert.vue';
 import EsDialog from './dialog/dialog.vue';
 import EsMessage from './message/install';
-export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps, EsScrollBar, EsAlert, EsDialog, EsMessage, };
+import EsDrawer from './drawer/drawer.vue';
+export { EsButton, EsCard, EsInput, EsTag, EsRadio, EsCheckbox, EsSwitch, EsSelect, EsSteps, EsScrollBar, EsAlert, EsDialog, EsMessage, EsDrawer, };
 declare const _default: {
     install: (app: App<any>) => void;
 };

@@ -12,6 +12,7 @@ import EsScrollBar from './scrollbar/scrollbar.vue'
 import EsAlert from './alert/alert.vue'
 import EsDialog from './dialog/dialog.vue'
 import EsMessage from './message/install'
+import EsDrawer from './drawer/drawer.vue'
 
 const components = [
   EsButton,
@@ -26,6 +27,7 @@ const components = [
   EsScrollBar,
   EsAlert,
   EsDialog,
+  EsDrawer,
 ]
 
 const install = (app: App) => {
@@ -48,6 +50,7 @@ export {
   EsAlert,
   EsDialog,
   EsMessage,
+  EsDrawer,
 }
 
 export default {
