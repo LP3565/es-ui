@@ -34,6 +34,7 @@ const install = (app: App) => {
   components.forEach((item) => {
     app.component(item.name, item)
   })
+  app.config.globalProperties.$message = EsMessage
 }
 
 export {
