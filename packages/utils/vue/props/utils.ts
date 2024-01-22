@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/** 借鉴 element-plus */
+// 借鉴 element-plus
 export type Writable<T> = { -readonly [P in keyof T]: T[P] }
 export type WritableArray<T> = T extends readonly any[] ? Writable<T> : T
 

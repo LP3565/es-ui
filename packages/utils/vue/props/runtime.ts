@@ -1,5 +1,5 @@
 /* eslint-disable vue/prefer-import-from-vue */
-/** 借鉴 element-plus */
+// 借鉴 element-plus
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { warn, type PropType } from 'vue'
 import { isObject, hasOwn } from '@vue/shared'

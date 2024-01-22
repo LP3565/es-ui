@@ -1,4 +1,4 @@
-/** 借鉴 element-plus */
+// 借鉴 element-plus
 const namespace = 'es'
 const state_prefix = 'is-'
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/** 借鉴 element-plus */
+// 借鉴 element-plus
 import type { epPropKey } from './runtime'
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { IfNever, UnknownToNever, WritableArray } from './utils'
