@@ -34,10 +34,10 @@ import { useRipple } from '@es-ui/hooks/useRipple'
 const _ref = ref<HTMLButtonElement>()
 
 const props = defineProps(buttonProps)
-const emit = defineEmits(['onClick'])
+const emit = defineEmits(['click'])
 
-const clickHandle = () => {
-  emit('onClick')
+const clickHandle = (event: Event) => {
+  emit('click', event)
 }
 
 const { _mold, _size } = useButton(props)
