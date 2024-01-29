@@ -5,7 +5,6 @@
       :type="type"
       :placeholder="placeholder"
       :max="max"
-      :min="min"
       v-model="value"
       :class="[dn.b(), dn.is('disabled', disabled)]"
       :disabled="disabled"
@@ -24,7 +23,6 @@
         :id="label"
         v-model="value"
         :max="max"
-        :min="min"
         :disabled="disabled"
         @change="changeHandle"
         @input="inputHandle"
@@ -79,13 +77,20 @@ const inputHandle = (event: Event) => {
 
 const keydownHandle = (event: KeyboardEvent) => {
   emit('keydown', event)
+  if (props.max) {
+    if (props.modelValue!.length >= props.max) {
+      if (event.code !== 'Backspace' || event.keyCode !== 8) {
+        event.preventDefault()
+      }
+    }
+  }
 }
 
-const focusHandle = (event: Event) => {
+const focusHandle = (event: FocusEvent) => {
   emit('focus', event)
 }
 
-const blurHandle = (event: Event) => {
+const blurHandle = (event: FocusEvent) => {
   emit('blur', event)
 }
 

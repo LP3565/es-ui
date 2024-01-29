@@ -32,7 +32,10 @@ export const inputProps = buildProps({
    * @description input v-model
    * @prop String
    */
-  modelValue: String,
+  modelValue: {
+    type: String,
+    required: true,
+  },
   /**
    * @description input placeholder
    */
@@ -41,10 +44,6 @@ export const inputProps = buildProps({
    * @description Maximum text length
    */
   max: Number,
-  /**
-   * @description Minimum text length
-   */
-  min: Number,
   /**
    * @description disabled input
    */
