@@ -18,6 +18,10 @@
     color: #fff;
   }
 
+  @include e('text') {
+    margin-right: 6px;
+  }
+
   @include e('close') {
     margin-left: 4px;
     margin-top: 2px;

@@ -1,18 +1,20 @@
 <template>
   <Teleport to="body">
     <Transition name="dialog">
-      <div
-        :class="[b()]"
-        :style="{ zIndex: zIndex ? zIndex : '', backgroundColor: modal ? '' : 'transparent' }"
-        v-if="modelValue"
-        @click="hideHandle"
-      >
+      <div :class="b()" v-if="modelValue">
+        <div
+          :class="[e('modal')]"
+          :style="{ zIndex: zIndex ? zIndex : '', backgroundColor: modal ? '' : 'transparent' }"
+          @click="hideHandle"
+        ></div>
+
         <div
           :class="e('box')"
           :style="{
             width: width ? width : '',
             marginTop: top ? top : '',
             boxShadow: modal ? '' : '0 0 12px 8px rgba(0, 0, 0, 0.06)',
+            zIndex: zIndex ? zIndex + 1 : '',
           }"
         >
           <div :class="[e('header'), is('center', center)]">
