@@ -1,5 +1,5 @@
 <template>
-  <Teleport to="body">
+  <Teleport to="#es-message-container">
     <Transition name="message">
       <div :id="id" :class="[b(), m(mold)]" v-if="isShow" :style="{ zIndex: zIndex ? zIndex : '' }">
         <div :class="e('icon')">
