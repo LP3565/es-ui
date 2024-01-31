@@ -9,13 +9,15 @@
   align-items: center;
   width: 100%;
   pointer-events: none;
+  z-index: 9999;
 }
 
 @include b('message') {
+  pointer-events: all;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(-50%, 50%);
+  transform: translateY(50%);
   width: max-content;
   margin-top: 16px;
   padding: 10px;
@@ -69,5 +71,5 @@
 
 .message-enter-from,
 .message-leave-to {
-  transform: translateX(-50%) translateY(-200%);
+  transform: translateY(-200%);
 }
