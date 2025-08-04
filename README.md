@@ -5,7 +5,7 @@
 
 ## Getting Started
 
-Let's start using EsUI. Here are some simple usage examples. For more information, please go here to [get started](https://lp3565.github.io/).
+Let's start using EsUI. Here are some simple usage examples. For more information, please go here to [get started](https://lp3565.github.io/es-ui-docs/).
 
 ### Install
 
