@@ -2,11 +2,11 @@
 
 - Vue 3 Composition API
 - Written in TypeScript
-- document: [https://lp3565.github.io/es-ui-docs/](https://lp3565.github.io/components/install)
+- document: [https://lp3565.github.io/es-ui-docs/](https://lp3565.github.io/es-ui-docs/)
 
 ## Getting Started
 
-Let's start using EsUI. Here are some simple usage examples. For more information, please go here to [get started]([https://lp3565.github.io/es-ui-docs/](https://lp3565.github.io/components/install)).
+Let's start using EsUI. Here are some simple usage examples. For more information, please go here to [get started]([https://lp3565.github.io/es-ui-docs/])).
 
 ### Install
 
